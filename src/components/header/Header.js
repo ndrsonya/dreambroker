@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import logo from "./images/logo.png";
+import logo from "../images/logo.png";
+import './index.scss';
+
 export default function Header() {
     return(
         <div className="header">

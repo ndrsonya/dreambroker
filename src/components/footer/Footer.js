@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo_bw from "./images/logo_bw.webp";
+import logo_bw from "../images/logo_bw.webp";
+import './index.scss';
 
 export default function Footer() {
     return (

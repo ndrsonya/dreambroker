@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import MainArea from './components/MainArea';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import MainArea from './components/mainContent/MainArea';
 
 function App() {
   const [error, setError] = useState(null);
