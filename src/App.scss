@@ -14,7 +14,6 @@
     img{
       width: 91px;
       height: 58px;
-      
     }
 
     button{
@@ -38,9 +37,58 @@
   }
 
   .footer{
-    height: 20%;
     background-color: #313245;
     color: white;
+
+    .footerContent{
+      display: flex;
+      flex-direction: column;
+      margin: 3% 5%;
+      p{
+        width: 63%;
+        text-align: left;
+        font-family: Open Sans,sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: .002rem;
+        line-height: 1.5rem;
+      }
+      h5{
+        text-align: left;
+        font-family: Open Sans,sans-serif;
+        font-weight: 400;
+        font-size: 1.313rem;
+      }
+      img{
+        width: 91px;
+        height: 58px; 
+      }
+      .contactUs{
+        p{
+          margin: 0;
+        }
+        .name{
+          font-weight: bold;
+        }
+        .email{
+          text-decoration: underline;
+        }
+      }
+
+      hr{
+        width: 100%;
+      }
+
+      .copyright{
+        font-family: Open Sans,sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: .002rem;
+        line-height: 1.5rem;
+        color: #b4b7bf;
+      }
+    }
+    
   }
 }
 
