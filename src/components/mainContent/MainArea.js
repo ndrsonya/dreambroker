@@ -6,6 +6,8 @@ import inspire from "../images/inspire.png";
 import connect from "../images/connect.png";
 import learn from "../images/learn.png";
 import benchmark from "../images/benchmark.png";
+import { Player } from 'video-react';
+
 
 export default function MainArea() {
     return (
@@ -24,7 +26,10 @@ export default function MainArea() {
                 </div>
 
                 <div className="video">
-
+                    <Player
+                    poster="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/poster?etag=1581950976000">
+                        <source src="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/fullhd.mp4" />
+                    </Player>
                 </div>
 
                 <div className="covidAnnounce">
