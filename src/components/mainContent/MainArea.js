@@ -12,22 +12,33 @@ import { Player } from 'video-react';
 export default function MainArea() {
     return (
         <div className="main">
-            <div className="Wellcome">
-                <h1>Welcome to the Q1 User Group Meeting</h1>
+            <div className="wellcome">
 
-                <div className="host">
-                    <p>Host</p>
-                    <p>Traficom | Kumpulantie 11, 00520 Helsinki</p>
-                </div>
+                <h1>Welcome to the Q1<br /> User Group Meeting!</h1>
 
-                <div className="date">
-                    <p>Date and time</p>
-                    <p>8.30 - 10.30, TBA</p>
+                <div className="horizontalDivs">
+                    <div className="host">
+                        <h5>
+                            <b>Host</b><br />
+                            Traficom | Kumpulantie 11, 00520 Helsinki
+                        </h5>
+                        <a>
+                            <p>Get directions</p>
+                        </a>
+                    </div>
+
+                    <div className="date">
+                        <h5>
+                            <b>Date and time</b><br />
+                            8.30 - 10.30, TBA
+                        </h5>
+                    </div>
+
                 </div>
 
                 <div className="video">
                     <Player
-                    poster="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/poster?etag=1581950976000">
+                        poster="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/poster?etag=1581950976000">
                         <source src="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/fullhd.mp4" />
                     </Player>
                 </div>

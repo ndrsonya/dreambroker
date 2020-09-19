@@ -1,7 +1,57 @@
 .main{
    text-align: center;
-   .video{
-      width: 80%;
-      border-style: none;
+   padding: 3% 5%;
+   display: flex;
+   justify-content: center; 
+   
+   .wellcome{
+      margin: 0% 5%;
+      text-align: left;
+      h1{
+         font-weight: 600;
+         color: #000;
+         font-size: 3.063rem;
+         letter-spacing: -0.01rem;
+         line-height: 3.69rem;
+      }
+      .horizontalDivs{
+         display: flex;
+         flex-direction: row;
+         .host{
+            width: 60%;
+         }
+         .date{
+            width: 40%;
+         }
+         h5{
+            font-weight: 400;
+            font-size: 1.313rem;
+            color: #000;
+            letter-spacing: initial;
+            line-height: initial;
+            margin: 0%;
+         }
+         p{    
+            color: #be00bd;
+            margin: 0% 0% 10% 0%;
+         }
+      }
    }
+   .video{
+      display: flex;
+      justify-content: center; 
+      width: 100%; 
+      .video-react{
+         .video-react-big-play-button {
+            background-color: #BE00BD;
+            bottom: 10px;
+            top: auto;
+            border: none;
+         }
+         .video-react-time-control {
+            font-family: Open Sans,sans-serif;
+         }
+      } 
+   }
+
     }
