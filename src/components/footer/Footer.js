@@ -17,9 +17,7 @@ export default function Footer() {
                 </div>
                 <hr></hr>
                 <p className="copyright">© Dream Broker Oy, 2020. All rights reserved.</p>
-
             </div>
-
         </div>
     );
 }

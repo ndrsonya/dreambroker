@@ -2,11 +2,13 @@
    text-align: center;
    padding: 3% 5%;
    display: flex;
+   flex-direction: column;
    justify-content: center; 
+   text-align: left;
+   max-width: 1152px;
    
    .wellcome{
       margin: 0% 5%;
-      text-align: left;
       h1{
          font-weight: 600;
          color: #000;
@@ -36,22 +38,101 @@
             margin: 0% 0% 10% 0%;
          }
       }
+
+      .video{
+         display: flex;
+         justify-content: center; 
+         width: 100%; 
+         .video-react{
+            .video-react-big-play-button {
+               background-color: #BE00BD;
+               bottom: 10px;
+               top: auto;
+               border: none;
+            }
+            .video-react-time-control {
+               font-family: Open Sans,sans-serif;
+            }
+         } 
+      }
    }
-   .video{
+   
+   .covidAnnounce{
       display: flex;
-      justify-content: center; 
-      width: 100%; 
-      .video-react{
-         .video-react-big-play-button {
-            background-color: #BE00BD;
-            bottom: 10px;
-            top: auto;
-            border: none;
-         }
-         .video-react-time-control {
-            font-family: Open Sans,sans-serif;
-         }
-      } 
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 11%;
+      img{
+         width: 35%;
+      }
+      h5{
+         margin-top: 10%;
+         width: 50%;
+         font-weight: 400;
+         font-size: 1.313rem;
+         color: #000;
+         letter-spacing: initial;
+         line-height: initial;
+      }
    }
+      .agenda{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         margin-top: 11%;
+         img{
+            width: 41%;
+         }
+         h5{
+            margin-top: 10%;
+            width: 50%;
+            font-weight: 400;
+            font-size: 1.313rem;
+            color: #000;
+            letter-spacing: initial;
+            line-height: initial;
+         }
+      }
+      .tailored{
+         text-align: center;
+         margin-top: 15%;
+         h2{
+            font-weight: 600;
+            font-size: 2.438rem;
+            color: #000;
+            letter-spacing: -0.002rem;
+            line-height: 2.75rem;
+         }
+         .values{
+            margin-top: 10%;
+            margin-bottom: 10%;
+            display: flex;
+            flex-direction: row;
+            justify-items: space-between;
+            div{
+               height: 100%;
+               margin: 1%;
+               h4{
+                  height: 25%;
+                  margin-block-start: 1.33em;
+                  margin-block-end: 1.33em;
+                  margin-inline-start: 0px;
+                  margin-inline-end: 0px;
+                  font-weight: bold;
+               }
+               p{
+                  height: 25%;
+                  margin-block-start: 1em;
+                  margin-block-end: 1em;
+                  margin-inline-start: 0px;
+                  margin-inline-end: 0px;
+               }
+               img{
+                  width: 125px;
+                  height: 125px;
+               }
+         }
+         }
+      }
 
     }

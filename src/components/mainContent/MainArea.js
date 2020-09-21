@@ -19,17 +19,17 @@ export default function MainArea() {
                 <div className="horizontalDivs">
                     <div className="host">
                         <h5>
-                            <b>Host</b><br />
+                            <b>Host</b><br/>
                             Traficom | Kumpulantie 11, 00520 Helsinki
                         </h5>
                         <a>
                             <p>Get directions</p>
-                        </a>
+                            </a>
                     </div>
 
                     <div className="date">
                         <h5>
-                            <b>Date and time</b><br />
+                            <b>Date and time</b><br/>
                             8.30 - 10.30, TBA
                         </h5>
                     </div>
@@ -45,12 +45,12 @@ export default function MainArea() {
 
                 <div className="covidAnnounce">
                     <img src={lady} alt="Lady picture" />
-                    <p>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to postpone the Q1 User Group Meetings.</p>
+                    <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
                 </div>
 
                 <div className="agenda">
                     <img src={sir} alt="Lady picture" />
-                    <p>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to postpone the Q1 User Group Meetings.</p>
+                    <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to postpone the Q1 User Group Meetings.</h5>
                 </div>
 
                 <div className="tailored">
