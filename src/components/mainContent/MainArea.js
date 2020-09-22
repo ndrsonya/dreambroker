@@ -7,7 +7,6 @@ import connect from "../images/connect.png";
 import learn from "../images/learn.png";
 import benchmark from "../images/benchmark.png";
 import { Player } from 'video-react';
-import ReactPlayer from 'react-player';
 
 export default function MainArea() {
 
@@ -44,20 +43,20 @@ export default function MainArea() {
                 }
             )
     }, []);
-    console.log(event);
+  
 
 
     return (
         <div className="main">
             <div className="wellcome">
 
-                <h1>Welcome to the Q1<br /> User Group Meeting!</h1>
+                <h1>Welcome to the {event.event_name}</h1>
 
                 <div className="horizontalDivs">
                     <div className="host">
                         <h5>
                             <b>Host</b><br />
-                            Traficom | Kumpulantie 11, 00520 Helsinki
+                            {event.host_name} | {event.address}
                         </h5>
                         <a href={event.link}> <p>Get directions</p>
                         </a>
@@ -66,7 +65,7 @@ export default function MainArea() {
                     <div className="date">
                         <h5>
                             <b>Date and time</b><br />
-                            8.30 - 10.30, TBA
+                            {event.start_time} - {event.end_time}, TBA
                         </h5>
                     </div>
 
@@ -77,7 +76,7 @@ export default function MainArea() {
                         poster="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/poster?etag=1581950976000">
                         <source src="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/fullhd.mp4" />
                     </Player>
-                    
+
 
                 </div>
 
@@ -87,8 +86,20 @@ export default function MainArea() {
                 </div>
 
                 <div className="agenda">
+                    <div className="ArrayItems">
+                        <h2>Agenda</h2>
+                        <ul>
+                        {
+                            event.agenda.map((item) =>
+                                <li key={item.name}>
+                                    <p><b>{item.time} {item.name} </b></p>
+                                    <p>{item.desc}</p>
+                                </li>
+                            )
+                        }
+                        </ul>
+                    </div>
                     <img src={sir} alt="Sir" />
-                    <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to postpone the Q1 User Group Meetings.</h5>
                 </div>
 
                 <div className="tailored">
@@ -126,7 +137,7 @@ export default function MainArea() {
                     </div>
                     <div className="joinCommunity">
                         <h2>Join the Community!</h2>
-                        <p>Connect with other users already or continue the discussions after the meeting via our Linkedin group!</p>
+                        <h5>Connect with other users already or continue the discussions after the meeting via our <a href="https://www.linkedin.com/groups/8630968/">Linkedin group!</a></h5>
                     </div>
 
                 </div>
