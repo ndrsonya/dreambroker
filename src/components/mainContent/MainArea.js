@@ -7,9 +7,46 @@ import connect from "../images/connect.png";
 import learn from "../images/learn.png";
 import benchmark from "../images/benchmark.png";
 import { Player } from 'video-react';
-
+import ReactPlayer from 'react-player';
 
 export default function MainArea() {
+
+
+    const [event, setEvent] = useState({
+        addresss: '',
+        event_name: '',
+        date: '',
+        start_time: '',
+        end_time: '',
+        agenda: [],
+        host_name: '',
+        link: ''
+    });
+
+    useEffect(() => {
+        fetch("http://localhost:1337/events")
+            .then(response => response.json())
+            .then(
+                (res) => {
+                    setEvent({
+                        address: res[0].address,
+                        event_name: res[0].event_name,
+                        date: res[0].date,
+                        start_time: res[0].start_time,
+                        end_time: res[0].end_time,
+                        agenda: res[0].agenda,
+                        host_name: res[0].host_name,
+                        link: 'https://www.google.com/maps/place/' + res[0].address
+                    });
+                },
+                (error) => {
+                    console.log(error);
+                }
+            )
+    }, []);
+    console.log(event);
+
+
     return (
         <div className="main">
             <div className="wellcome">
@@ -19,17 +56,16 @@ export default function MainArea() {
                 <div className="horizontalDivs">
                     <div className="host">
                         <h5>
-                            <b>Host</b><br/>
+                            <b>Host</b><br />
                             Traficom | Kumpulantie 11, 00520 Helsinki
                         </h5>
-                        <a>
-                            <p>Get directions</p>
-                            </a>
+                        <a href={event.link}> <p>Get directions</p>
+                        </a>
                     </div>
 
                     <div className="date">
                         <h5>
-                            <b>Date and time</b><br/>
+                            <b>Date and time</b><br />
                             8.30 - 10.30, TBA
                         </h5>
                     </div>
@@ -41,15 +77,17 @@ export default function MainArea() {
                         poster="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/poster?etag=1581950976000">
                         <source src="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/fullhd.mp4" />
                     </Player>
+                    
+
                 </div>
 
                 <div className="covidAnnounce">
-                    <img src={lady} alt="Lady picture" />
+                    <img src={lady} alt="Lady" />
                     <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
                 </div>
 
                 <div className="agenda">
-                    <img src={sir} alt="Lady picture" />
+                    <img src={sir} alt="Sir" />
                     <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to postpone the Q1 User Group Meetings.</h5>
                 </div>
 
@@ -59,28 +97,28 @@ export default function MainArea() {
                     <div className="values">
 
                         <div>
-                            <img src={connect} alt="Connect picture" />
+                            <img src={connect} alt="Connect" />
                             <h3>Connect</h3>
                             <p>with other users that are located in your city across different
                            functions and industries</p>
                         </div>
 
                         <div>
-                            <img src={benchmark} alt="Bechmark picture" />
+                            <img src={benchmark} alt="Bechmark" />
                             <h3>Benchmark</h3>
                             <p>with other online video use cases, communication
                            roadmaps or content strategies </p>
                         </div>
 
                         <div>
-                            <img src={inspire} alt="Inspire picture" />
+                            <img src={inspire} alt="Inspire" />
                             <h3>Inspire</h3>
                             <p>and be inspired by the use case presentation and interactive discussions</p>
 
                         </div>
 
                         <div>
-                            <img src={learn} alt="Learn picture" />
+                            <img src={learn} alt="Learn" />
                             <h3>Learn</h3>
                             <p>more about how to use the features and find solutions to your challenges</p>
                         </div>
