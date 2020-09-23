@@ -15,9 +15,8 @@ function App() {
 
     <div className="App">
       <Router>
-        <div className="home">
-          <Switch>
-            <Route path="/">
+        <Switch>
+            <Route path="/home">
               <Header />
               <MainArea />
               <Footer />
@@ -26,7 +25,7 @@ function App() {
               <Signup />
             </Route>
           </Switch>
-        </div>
+       
       </Router>
     </div>
   );

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function Signup() {
     return (
         <div className="main">
-            <h1>sign up!</h1>
+            <h1>signjhgjlgyljgl up!</h1>
         </div>
     )
 }
