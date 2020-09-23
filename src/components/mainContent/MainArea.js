@@ -6,7 +6,6 @@ import inspire from "../images/inspire.png";
 import connect from "../images/connect.png";
 import learn from "../images/learn.png";
 import benchmark from "../images/benchmark.png";
-import { Player } from 'video-react';
 
 
 /**
@@ -60,14 +59,13 @@ export default function MainArea() {
                 <h1>Welcome to the {event.event_name}</h1>
 
                 <div className="horizontalDivs">
+
                     <div className="host">
                         <h5>
                             <b>Host</b><br />
                             {event.host_name} | {event.address}
                         </h5>
                         <p><a href={event.link}> Get directions</a></p>
-
-
                     </div>
 
                     <div className="date">
@@ -76,27 +74,23 @@ export default function MainArea() {
                             {event.start_time} - {event.end_time}, TBA
                         </h5>
                     </div>
-
                 </div>
             </div>
 
             <div className="video">
+
                 <video controls poster="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/poster?etag=1581950976000">
                     <source src="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/fullhd.mp4" type="video/mp4" />
+                        Your browser does not support HTML video.
+                </video>
 
-  Your browser does not support HTML video.
-</video>
+            </div >
 
-
+            <div className="covidAnnounce" id="covidAnnounce">
+                <img src={lady} alt="Lady" />
+                <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
             </div>
-            <a name="announce" >
-                <div className="covidAnnounce">
 
-                    <img src={lady} alt="Lady" />
-                    <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
-
-                </div>
-            </a>
 
             <div className="agenda">
 
@@ -113,6 +107,7 @@ export default function MainArea() {
                         }
                     </ul>
                 </div>
+
                 <img src={sir} alt="Sir" />
             </div>
 
@@ -150,6 +145,7 @@ export default function MainArea() {
 
                 </div>
             </div>
+
             <div className="joinCommunity">
                 <h2>Join the Community!</h2>
                 <h5>Connect with other users already or continue the discussions after the meeting via our <a href="https://www.linkedin.com/groups/8630968/">Linkedin group!</a></h5>

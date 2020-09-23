@@ -10,7 +10,7 @@ export default function Header() {
     return(
         <div className="header">
             <img src={logo} alt="DreamBroker logo" />
-            <button onClick={()=>window.location.href='#announce'}>Sign me up!</button>
+            <button onClick={()=>window.location.href='#covidAnnounce'}>Sign me up!</button>
         </div>
     );
 }
