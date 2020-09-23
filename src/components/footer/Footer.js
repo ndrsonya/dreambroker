@@ -2,6 +2,9 @@ import React from "react";
 import logo_bw from "../images/DB_logo_white_RGB.png";
 import './index.scss';
 
+/**
+ * Footer component
+*/
 export default function Footer() {
     return (
         <div className="footer">

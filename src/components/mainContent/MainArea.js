@@ -8,6 +8,10 @@ import learn from "../images/learn.png";
 import benchmark from "../images/benchmark.png";
 import { Player } from 'video-react';
 
+
+/**
+ * Main content of the landing page
+*/
 export default function MainArea() {
 
 
@@ -22,6 +26,9 @@ export default function MainArea() {
         link: ''
     });
 
+    /**
+    * Getting data about the event from the server
+    */
     useEffect(() => {
         fetch("http://localhost:1337/events")
             .then(response => response.json())
@@ -80,12 +87,13 @@ export default function MainArea() {
             </div>
 
             <div className="covidAnnounce">
+                <a name="announce"></a>
                 <img src={lady} alt="Lady" />
                 <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
             </div>
 
             <div className="agenda">
-                
+
                 <div className="ArrayItems">
                     <h2>Agenda</h2>
                     <ul>
