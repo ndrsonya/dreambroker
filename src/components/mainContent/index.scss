@@ -29,21 +29,14 @@
             margin: 0% 0% 10% 0%;
          }
       }
-      .video {
-         display: flex;
-         justify-content: center;
-         width: 100%;
-         .video-react {
-            .video-react-big-play-button {
-               background-color: #be00bd;
-               bottom: 10px;
-               top: auto;
-               border: none;
-            }
-            .video-react-time-control {
-               font-family: Open Sans, sans-serif;
-            }
-         }
+   }
+   .video{
+      width:100%;
+      display: flex;
+      justify-content: center;
+      video {
+         align-items: center;
+         width: 90%;
       }
    }
    .covidAnnounce {

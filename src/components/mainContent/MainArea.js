@@ -66,6 +66,8 @@ export default function MainArea() {
                             {event.host_name} | {event.address}
                         </h5>
                         <p><a href={event.link}> Get directions</a></p>
+
+
                     </div>
 
                     <div className="date">
@@ -76,21 +78,25 @@ export default function MainArea() {
                     </div>
 
                 </div>
+            </div>
+
+            <div className="video">
+                <video controls poster="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/poster?etag=1581950976000">
+                    <source src="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/fullhd.mp4" type="video/mp4" />
+
+  Your browser does not support HTML video.
+</video>
 
 
-                <div className="video">
-                    <Player
-                        poster="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/poster?etag=1581950976000">
-                        <source src="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/fullhd.mp4" />
-                    </Player>
+            </div>
+            <a name="announce" >
+                <div className="covidAnnounce">
+
+                    <img src={lady} alt="Lady" />
+                    <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
+
                 </div>
-            </div>
-
-            <div className="covidAnnounce">
-                <a name="announce"></a>
-                <img src={lady} alt="Lady" />
-                <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
-            </div>
+            </a>
 
             <div className="agenda">
 
