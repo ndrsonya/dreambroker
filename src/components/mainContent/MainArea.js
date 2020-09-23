@@ -43,7 +43,7 @@ export default function MainArea() {
                 }
             )
     }, []);
-  
+
 
 
     return (
@@ -58,8 +58,7 @@ export default function MainArea() {
                             <b>Host</b><br />
                             {event.host_name} | {event.address}
                         </h5>
-                        <a href={event.link}> <p>Get directions</p>
-                        </a>
+                        <p><a href={event.link}> Get directions</a></p>
                     </div>
 
                     <div className="date">
@@ -71,24 +70,25 @@ export default function MainArea() {
 
                 </div>
 
+
                 <div className="video">
                     <Player
                         poster="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/poster?etag=1581950976000">
                         <source src="https://dreambroker.com/channel/2hfsjted/iuac6jhn/get/fullhd.mp4" />
                     </Player>
-
-
                 </div>
+            </div>
 
-                <div className="covidAnnounce">
-                    <img src={lady} alt="Lady" />
-                    <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
-                </div>
+            <div className="covidAnnounce">
+                <img src={lady} alt="Lady" />
+                <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
+            </div>
 
-                <div className="agenda">
-                    <div className="ArrayItems">
-                        <h2>Agenda</h2>
-                        <ul>
+            <div className="agenda">
+                
+                <div className="ArrayItems">
+                    <h2>Agenda</h2>
+                    <ul>
                         {
                             event.agenda.map((item) =>
                                 <li key={item.name}>
@@ -97,52 +97,53 @@ export default function MainArea() {
                                 </li>
                             )
                         }
-                        </ul>
-                    </div>
-                    <img src={sir} alt="Sir" />
+                    </ul>
                 </div>
-
-                <div className="tailored">
-                    <h2>Tailored For Dream Broker Studio Users</h2>
-
-                    <div className="values">
-
-                        <div>
-                            <img src={connect} alt="Connect" />
-                            <h3>Connect</h3>
-                            <p>with other users that are located in your city across different
-                           functions and industries</p>
-                        </div>
-
-                        <div>
-                            <img src={benchmark} alt="Bechmark" />
-                            <h3>Benchmark</h3>
-                            <p>with other online video use cases, communication
-                           roadmaps or content strategies </p>
-                        </div>
-
-                        <div>
-                            <img src={inspire} alt="Inspire" />
-                            <h3>Inspire</h3>
-                            <p>and be inspired by the use case presentation and interactive discussions</p>
-
-                        </div>
-
-                        <div>
-                            <img src={learn} alt="Learn" />
-                            <h3>Learn</h3>
-                            <p>more about how to use the features and find solutions to your challenges</p>
-                        </div>
-
-                    </div>
-                    <div className="joinCommunity">
-                        <h2>Join the Community!</h2>
-                        <h5>Connect with other users already or continue the discussions after the meeting via our <a href="https://www.linkedin.com/groups/8630968/">Linkedin group!</a></h5>
-                    </div>
-
-                </div>
-
+                <img src={sir} alt="Sir" />
             </div>
+
+            <div className="tailored">
+                <h2>Tailored For Dream Broker Studio Users</h2>
+
+                <div className="values">
+
+                    <div>
+                        <img src={connect} alt="Connect" />
+                        <h3>Connect</h3>
+                        <p>with other users that are located in your city across different
+                           functions and industries</p>
+                    </div>
+
+                    <div>
+                        <img src={benchmark} alt="Bechmark" />
+                        <h3>Benchmark</h3>
+                        <p>with other online video use cases, communication
+                           roadmaps or content strategies </p>
+                    </div>
+
+                    <div>
+                        <img src={inspire} alt="Inspire" />
+                        <h3>Inspire</h3>
+                        <p>and be inspired by the use case presentation and interactive discussions</p>
+
+                    </div>
+
+                    <div>
+                        <img src={learn} alt="Learn" />
+                        <h3>Learn</h3>
+                        <p>more about how to use the features and find solutions to your challenges</p>
+                    </div>
+
+                </div>
+            </div>
+            <div className="joinCommunity">
+                <h2>Join the Community!</h2>
+                <h5>Connect with other users already or continue the discussions after the meeting via our <a href="https://www.linkedin.com/groups/8630968/">Linkedin group!</a></h5>
+            </div>
+
+
+
+
         </div>
     )
 }

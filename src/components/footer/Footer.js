@@ -1,5 +1,5 @@
 import React from "react";
-import logo_bw from "../images/logo_bw.webp";
+import logo_bw from "../images/DB_logo_white_RGB.png";
 import './index.scss';
 
 export default function Footer() {
