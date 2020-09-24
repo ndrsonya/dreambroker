@@ -6,6 +6,7 @@ import inspire from "../images/inspire.png";
 import connect from "../images/connect.png";
 import learn from "../images/learn.png";
 import benchmark from "../images/benchmark.png";
+import Signup from "../signup/Signup.js"
 
 
 /**
@@ -13,6 +14,7 @@ import benchmark from "../images/benchmark.png";
 */
 export default function MainArea() {
 
+    let coronaVirus = true;
 
     const [event, setEvent] = useState({
         addresss: '',
@@ -54,7 +56,9 @@ export default function MainArea() {
 
     return (
         <div className="main">
+
             <div className="wellcome">
+
 
                 <h1>Welcome to the {event.event_name}</h1>
 
@@ -85,11 +89,13 @@ export default function MainArea() {
                 </video>
 
             </div >
+            { coronaVirus ?
+                <div className="covidAnnounce" id="covidAnnounce">
+                    <img src={lady} alt="Lady" />
+                    <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
+                </div> : <div></div>
+            }
 
-            <div className="covidAnnounce" id="covidAnnounce">
-                <img src={lady} alt="Lady" />
-                <h5>In the light of the uncertainty caused by coronavirus (COVID-19) and as a health and safety precaution, we have decided to <b>postpone</b> the Q1 User Group Meetings.</h5>
-            </div>
 
 
             <div className="agenda">
@@ -145,6 +151,11 @@ export default function MainArea() {
 
                 </div>
             </div>
+            { coronaVirus ? <div></div> :
+                <div className="covidAnnounce" id="covidAnnounce">
+                    <Signup id="covidAnnounce" />
+                </div>
+            }
 
             <div className="joinCommunity">
                 <h2>Join the Community!</h2>

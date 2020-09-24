@@ -10,6 +10,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
+    "validator": "^13.1.17",
     "video-react": "^0.14.1"
   },
   "scripts": {
