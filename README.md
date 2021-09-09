@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Landing page for the event with registration functionality
+
+## project description
+
+A landing page with a registration form for the company's event. The project requires the back end part from the repo "ndrsonya/dreambrokerbackend".  The code includes the variable "coronavirus" that ensures conditional rendering. If the variable is true it shows that the event is postponed, if the variable is false the signup form rendered instead. 
 
 ## Available Scripts
 
